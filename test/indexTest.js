@@ -22,7 +22,16 @@ describe( 'index.js', () => {
         "Thank you, Aki, for the wonderful surprise gift!",
       ]);
     } );
-  } );
+  } );  
+       function writeCards(names, event){
+        const messages = [];// Array to hold the thank you messages
+        // loop through each name in the provided array
+        for (let i = 0; i < names.length; i++){
+          messages.push('Thank you, '+ names[i]+', for the wonderful '+ event + ' gift!');
+       }
+       return messages;// return the array of messages
+      }
+  
 
   describe( 'countDown()', () => {
     afterEach( () => {
@@ -50,3 +59,10 @@ describe( 'index.js', () => {
     } );
   } );
 } );
+function countDown  (number){
+  while (number >= 0){
+    console.log(number);
+    number--;
+  }
+  return number;
+}
